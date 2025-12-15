@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html lang="ua">
+<head>
+	
+	<meta charset="UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="lab.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="description" content="Нова піцерія з неймовірним вибором товару.Власний імпорт товару.Швидка доставка.">
+	<title>Pizzahub</title>
+	<link rel="stylesheet" href="Putsentela_SA_21.css">
+</head>
+<body>
+	
+	<header>
+	    <div class="header-content-row"> 
+	        
+	        <div class="left-core">
+	            <div class="logo-container">
+	        		<img src="Logo_2.jpg" alt="Логотип">
+	        		<h2>PizzaHub</h2>
+	         	</div>
+	        </div>
+	        
+	        <nav class="top-nav-links">
+	        	<div class="charms">
+	        		<img src="location.png" alt="Логотип">
+	        		<a href="#">Локація</a>
+	        	</div>
+	        	<div class="charms">
+	        		<img src="cart.png" alt="Кошик">
+	        		<a href="#myModalCoupons" class="">Купони</a>
+	        	</div>
+	        	<div class="charms"> 
+	        		<img src="profile.png" alt="символ людини">
+	        		<a href="#">Скарги</a>
+	        	</div>
+	        	
+	        	<div class="hamburger-menu">
+					<input id="menu__toggle" type="checkbox" />
+					<label class="menu__btn" for="menu__toggle">
+						<span></span>
+					</label>
+
+					<ul class="menu__box">
+						<li><a class="menu__item" href="#">Головна</a></li>
+						<li><a class="menu__item" href="#">Про нас</a></li>
+						<li><a class="menu__item" href="#">Локація</a></li>
+						<li><a class="menu__item" href="#">Контакти</a></li>
+						<li><a class="menu__item" href="#">інше</a></li>
+					</ul>
+				</div>
+	        </nav>    
+		</div>
+	    <nav class="bot-nav-links">
+	    	 
+	        <a href="#about">Про нас</a>
+	        <a href="#Addres">Локація</a>
+	        <a href="#myModal" class="open-com-modal">Підтримка</a>
+	        <a href="#foot">Інше</a>
+	    </nav>
+	    
+    </header>
+    
+    <div id="myModal" class="modal-css">
+	    <div class="modal-content">
+	        <a href="#" class="close-modal">&times;</a>
+	        <div class="modal-guts">
+		        <p>Написати нам</p>
+		        <input type="text" placeholder="Ім'я">
+		        <input type="text" placeholder="E-mail">
+		        
+		        <textarea></textarea> 
+		        <div class="for-radio">
+		        	<input type="radio" id="rad">
+			        <label for="rad">Я погоджують з правилами спільноти</label>
+		        </div>
+	            <div class="anon-option">
+				    <input type="checkbox" id="anon-check">
+				    <label for="anon-check">Залишитись анонімним</label>
+				</div>
+	            <button>Надіслати</button>
+	        </div>    
+	        
+	    </div>	
+	</div>
+	<div id="myModalCoupons" class="modal-css">
+		<div class="modal-content2">
+			<a href="#" class="close-modal">&times;</a>
+			<p class="shout">Подарункові купони!</p>
+            <div class="modal-guts-coupons">
+            	
+            	<div class="table-item">
+            		<div class="web_animka"></div>
+            		<h3>Стандарт</h3>
+            		<p>200₴</p>
+            		<p>2 піци</p>
+            		<p>1 напій</p>
+            		<button>придбати</button>	
+            	</div>
+            	<div class="table-item">
+            		<div class="web_animka"></div>
+            		<h3>Делюкс</h3>
+            		<p>500₴</p>
+            		<p>4 піци</p>
+            		<p>3 напої</p>
+            		<button>придбати</button>	
+            	</div>
+            	<div class="table-item">
+            		<div class="web_animka"></div>
+            		<h3>Гранд</h3>
+            		<p>1000₴</p>
+            		<p>10 піц</p>
+            		<p>8 напоїв</p>
+            		<button>придбати</button>	
+            	</div>
+            	
+            	
+            </div>
+		</div>
+	</div>
+	
+	<main>	
+		<div class="custom-img main-elements">
+        	<img src="main_img_2k_png.png">
+    	</div>
+    		
+        <section id="Store" class="main-elements"> 
+        	<h2>Товар</h2>
+        	    <div class="flex-menu">
+        	    	<div class="pizzas">
+        	    		<img src="Pizza1.jpg" alt="піца">
+        	    		<h3>Мисливська</h3>
+        	    	</div>
+        	    	<div class="pizzas">
+        	    		<img src="Pizza2.jpg" alt="піца">
+        	    		<h3>Діабло</h3>
+        	    	</div>
+        	    	<div class="pizzas">
+        	    		<img src="Pizza3.jpg" alt="піца">
+        	    		<h3>Баланьєза</h3>
+        	    	</div>
+        	    	<div class="pizzas">
+        	    		<img src="Pizza1.jpg" alt="піца">
+        	    		<h3>Палермо</h3>
+        	    	</div>
+        	    	<div class="pizzas">
+        	    		<img src="Pizza2.jpg" alt="піца">
+        	    		<h3>Домініканська</h3>
+        	    	</div>
+        	    	
+        	    </div>		
+        </section>
+        <section id="about" class="main-elements">
+        	<h2>Про нас</h2>
+        	<div>
+	        	<div class="info-top">
+	        		<img src="mr_cook 1.jpg" alt="кухар">
+	        		<p>
+	        	    	Ми, майбутнє індустрії швидкого харчування!<br>
+	        	    	 Сучасна піцерія яка використовує найновіші технології<br>
+	        	    	  та роботу талановитих кухарів!
+	        	    </p>
+	        	</div>
+	        	<div class="info-bot">
+	        		<img src="oven.jpg" alt="пічка">
+	        	    <div>
+	        	    	<p>
+	        	    	Великий асортимент недорогої та вишуканої їжі,<br>
+	        	    	 швидка доставка та незабутній досвід.
+	        	        </p>
+	        	        <p>
+	        	    	Не проґавте акції в честь відкриття закладу!
+	        	        </p>
+	        	    </div>
+	        	</div>  
+	        </div>	  
+        </section>
+        <section id="Addres" class="main-elements">
+        	<video poster="bg.jpg" autoplay muted loop>
+        		<source src="Video Project.mp4" type="video/mp4">
+    		</video>
+    		
+    		<div class="address-info">
+    			<h2>Вулиця Садовського 34</h2>
+	        	
+	        	<p>Ви можете знайти нашу маленьку і новостоврену піцерію на вулиці Садовського у Львові.<br> Ми нещодавно відкрилися проте запевняємо що наші кулінари мають великий досвід у своїй справі.<br> В закладі дуже приємна сімейна атмосфера, достатньо місця для великих компаній.
+	        	</p>
+    		</div>	
+        </section>
+        <section id ="Answers" class="main-elements question-answer">
+        	<h2>Головні питання</h2>
+        	<details>
+        		<summary>Чому так смачно?</summary>
+        		<p>Це не просто піца, це майстерність!<br> Ми використовуємо лише найсвіжіші, добірні інгредієнти:<br> справжній італійський сир, ароматні трави та соковиті томати.<br> Спробуйте, і ви самі зрозумієте: Чому так смачно?<br> Відповідь криється у безкомпромісній якості.
+        		</p>
+        	</details>
+        	<details>
+        		<summary>Скільки коштує доставка?</summary>
+        		<p>Якщо наш кур'єр доставить піцу за 30 хвилин - доставка коштуватиме 5% від загальної суми,<br> в іншому ж випадку ДОСТАВКА БЕЗКОШТОВНО!
+        		</p>
+        	</details>
+        	<details>
+        		<summary>Що смакує найкраще?</summary>
+        		<p>В нас дуже смачна піца хоча покищо і не надто великий асортимент.<br>Наші кулінари наполегливо рекомендують "палермо".<br> подеякують, що в ній є секретні інгрідієнти😏
+        		</p>
+        	</details>
+        </section>
+	</main>
+	<footer id="foot">
+		<div class="logo-container">
+			<img src="Logo_2.jpg" alt="Логотип">
+		</div>
+		
+		<h2>PizzaHub</h2>
+		    <h3>м.Львів</h3>
+		    	<h4>+38000000000</h4>
+		    	<h4>вул.Садовського 34</h4>
+		<div class="progs">    	
+			<a href="#">
+				<img src="payment.jpg">
+			</a>
+			<a href="#">
+				<img src="appstore.jpg">
+			</a>
+			<a href="#">
+				<img src="gplay.jpg">
+			</a>	
+		</div>
+		<div class="socials">
+			<a href="#">
+				<img src="instagram_icon.png">
+			</a>
+			<a href="#">
+				<img src="facebook_icon.png">
+			</a>
+			<a href="#">
+				<img src="twitter_icon.png">
+			</a>
+			
+		</div>	   	
+	  
+	</footer>
+	
+</body>
+</html>

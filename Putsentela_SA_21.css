@@ -1,0 +1,741 @@
+
+* {
+
+box-sizing: border-box; 
+}
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+font-family: 'Inter', sans-serif;    
+margin: 0; 
+padding: 0;
+overflow-x: hidden;
+}
+
+header {
+display: flex;
+flex-direction: column; 
+align-items: center; 
+position:fixed; /*tut fix*/   
+padding: 10px ,0;
+margin-bottom: 0;
+background-color: #FFE524;
+width: 100%;
+top: 0;       
+left: 0; 
+z-index: 1000;
+}
+  .charms img {
+    width: 32px;
+    height: 32px;
+    vertical-align: middle; 
+
+  }
+  .charms{
+
+  }
+  .header-content-row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 100%; 
+  padding: 0 10px;
+  }
+  .logo-container img {
+                  
+  border-radius: 500px;
+                  
+  }
+  .left-core {
+  display: flex; 
+  flex-direction: column;
+  gap: 10px; 
+  }
+  .logo-container{
+  display: flex;
+  flex-direction: row;
+                
+  gap: 20px;
+
+  }
+  .bot-nav-links {
+      display: flex;
+      align-items: flex-start; 
+      gap:50px;
+      width: 100%; 
+      background-color: black; 
+      padding: 10px 20px; 
+      margin-top: 5px;
+      
+  }
+  .bot-nav-links a {
+    color: white; 
+    text-decoration: none; 
+  }
+
+  .top-nav-links {
+  display: flex;
+  justify-content: space-between;
+  gap :50px;
+  }
+  .top-nav-links a {
+  color: black; 
+  text-decoration: none; 
+  }
+  #menu__toggle {
+  opacity: 0;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+
+.menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  width: 26px;
+  height: 26px;
+
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: #ffffff;
+
+  transition-duration: .25s;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+
+  width: 300px;
+  height: 100%;
+
+  margin: 0;
+  padding: 80px 0;
+
+  list-style: none;
+
+  background-color: #000000;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+
+  transition-duration: .25s;
+}
+
+.menu__item {
+  display: block;
+  padding: 12px 24px;
+
+  color: #ffffff !important;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition-duration: .25s;
+}
+.menu__item:hover {
+  background-color: #FFE524;
+  color: #000000 !important;
+}
+
+main { 
+  display:flex;
+  flex-direction: column;
+  
+  
+  gap: 50px; 
+  padding-top: 50px;      
+}
+
+main h2 {
+text-align: center;
+}
+
+  
+  .flex-menu{
+  
+  padding:20px;
+  display:flex;
+  justify-content: space-around; 
+  flex-wrap: wrap;
+  gap: 20px;
+  }
+  .flex-menu P{
+  
+  width:100px;
+  height:200px; 
+  }
+  .custom-img{
+  width: 100%;
+  
+  }
+  .custom-img img{
+  width: 100%;
+  display: block;
+  }
+  
+  .pizzas{
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   border-radius: 8px;
+
+   text-align: center;
+  }
+  .pizzas h3 {
+  background-color: #FFE524; 
+    
+    
+  padding: 5px 10px; 
+
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+  .about{
+
+  }
+ 
+section {
+    /* Це правильно, воно робить секцію точкою відліку */
+    position: relative; 
+    
+    /* !! КЛЮЧ: Задайте висоту для вашої "ковбаси" !! */
+    /* Використовуйте min-height для гнучкості або height для фіксованого розміру */
+    min-height: 200px; 
+    
+    overflow: hidden; 
+}
+
+
+/* 2. Відео: Абсолютний фон */
+video {
+    /* ЗМІНІТЬ: Використовуйте absolute, а не fixed! */
+    position: absolute; 
+    
+    /* Розтягує відео на 100% ширини і висоти батьківської секції */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    /* Зберігає коректне відображення, щоб покрити простір */
+    object-fit: cover;
+    
+    /* Відправляє відео на задній план */
+    z-index: 1; 
+}
+
+#Addres {
+    /* Встановлюємо висоту, наприклад, на всю висоту вікна перегляду */
+    height: 100vh; /* Або будь-яка фіксована висота, яка вам потрібна */
+
+    /* Встановлюємо позиціонування, щоб дочірні абсолютні елементи (відео та оверлей) 
+       позиціонувалися відносно нього */
+    position: relative; 
+
+    /* Всі інші стилі для цієї секції... */
+}
+
+.address-info {
+    /* ВІДМІНА: Змініть position: absolute на position: relative */
+    /* Якщо ви залишите його absolute, вам не потрібно задавати йому висоту 100%, 
+       але простіше зробити його relative, щоб він просто "лежав" поверх. */
+    position: relative; 
+    
+    /* Підніміть вміст над відео */
+    z-index: 2; 
+    
+    /* Вам більше не потрібні top: 0, left: 0, width: 100%, height: 100% */
+    /* Використовуйте тільки ті, що стосуються форматування вмісту */
+    
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    padding: 20px;
+    
+    /* Стилі Flexbox: Використовуйте width: 100% та height: 100% */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+}
+
+      .info-top {
+          display: flex;
+          align-items: center; 
+          gap: 20px; 
+          flex-direction: row; 
+          margin-bottom: 20px;
+      }
+      .info-top p {
+          text-align: center; 
+          margin-left: -15px;
+      }
+      
+
+      
+      .info-bot {
+          display: flex; 
+          align-items: center; 
+          gap: 20px; 
+          flex-direction: row-reverse; 
+          margin-bottom: 20px;
+      }
+       .info-bot p {
+        text-align: center; 
+        transform: translateX(-415px);
+      } 
+      .info-top img, .info-bot img {
+          max-width: 40%;
+          height: auto;
+      }
+
+      .info-top p {
+          flex-grow: 1; 
+          transform: translateX(115px);
+      }
+      .question-answer{
+        text-align: center;
+        
+      }
+      .question-answer p {
+          font-size: 18px; 
+          line-height: 1.6; 
+           
+      }
+
+      footer {
+          
+          padding: 10px 0; 
+          
+          background-color: black; 
+          color: white; 
+      }
+      .socials{
+        align-items:flex-end;
+        flex-direction:column;
+      }
+      .socials img{
+        width: 32px;
+        height: 32px;
+      }
+
+
+
+      
+.modal-css { /* тут модальне вікно */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Темний, прозорий фон */
+
+    /* Приховуємо його (використовуємо visibility/opacity для анімації) */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s; /* Додаємо плавний перехід */
+    z-index: 1000;
+}
+.modal-content {
+    /* Фіксовані розміри вікна */
+    width: 450px;
+    height: 600px; 
+    max-width: 90%; /* Забезпечуємо адаптивність на малих екранах */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+    /* Центрування за допомогою transform */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.modal-guts {
+    /* Активація та центрування */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    
+    width: 100%;
+    margin-top: 20px; 
+}
+
+
+/* Стилі для елементів форми (для кращого вигляду та центрування) */
+.modal-guts p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.modal-guts input[type="text"],
+.modal-guts textarea,
+.modal-guts button {
+    
+    width: 90%; 
+    margin-bottom: 10px; 
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+.modal-guts textarea {
+    height: 250px;
+    resize: none; 
+}
+
+.modal-guts button {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+.for-radio{
+  display:flex;
+  align-items:row;
+  margin-right:1%;
+  width: 90%;
+  font-size: 0.9em;
+}
+.anon-option {
+    display: flex; 
+    align-items: center; 
+    width: 90%; 
+    margin-bottom: 10px;
+    
+    margin-right: auto; 
+    /* Додатково: видаляємо margin-left: auto; якщо він був застосований */
+    margin-left: 5%; /* Невеликий відступ від лівого краю, як у полів */
+}
+
+/* 3. Стиль для тексту (Label) */
+.anon-option label {
+    font-size: 0.9em;
+    color: #555;
+    user-select: none; /* Заборона виділення тексту */
+    margin-left: 5px; /* Невеликий відступ від самого чекбокса */
+}
+#rad{
+  accent-color: black;
+}
+#anon-check {
+    accent-color: black;
+}
+
+/* 2. При кліку на посилання href="#myModal" (коли елемент стає :target) */
+.modal-css:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 3. Кнопка закриття просто повертає URL до # */
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    text-decoration: none; /* Прибираємо підкреслення */
+    color: #333;
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+
+
+
+
+/* Modal windo2*/
+
+.modal-content2{
+    width: 500px;
+    max-width: 90%; 
+/* --- ЗМІНИ ТУТ --- */
+    max-height: 90vh; /* Обмежуємо максимальну висоту 90% від висоти вікна перегляду */
+    overflow-y: auto; 
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.modal-guts-coupons{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.shout{
+  text-align:center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.table-item{
+    display: flex; 
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid black; /* Рамка */
+    margin: 10px;
+    padding: 0; /* Прибираємо внутрішній відступ, щоб контролювати його всередині h3 та p */
+    text-align: center;
+    height:350;
+    width: 110px; 
+    background-color: #FFE524; 
+    position: relative; 
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+/*.web_animka {
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 1000%;
+    z-index: 1; 
+    
+    
+    background-image: url('web_animka.gif');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+   
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+.table-item:hover .web_animka {
+    opacity: 1; 
+}*/
+
+.table-item h3 {
+
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 0; /* Внутрішній відступ для тексту */
+    width: 100%; /* Займає всю ширину батьківського контейнера */
+    margin: 0; /* Прибираємо стандартний margin h3 */
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s; /* Плавний перехід */
+}
+.table-item p{
+  font-weight: bold;
+}
+
+
+.table-item button {
+    background-color: #FFE524;
+    color: silod black;
+    border-radius:10px; 
+    border-top: 2px solid black; 
+    padding: 8px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 0px; 
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.table-item h3, 
+.table-item p, 
+.table-item button {
+    position: relative;
+    z-index: 2; /* Вміст має бути НАД GIF */
+}
+.table-item:hover {
+    background-color: black; 
+    color: white; 
+    border-color: black; 
+}
+
+
+.table-item:hover h3 {
+    background-color: #FFE524; 
+    color: black; 
+}
+
+
+/* 4. Змінюємо КНОПКУ (button) при наведенні на батьківський елемент */
+.table-item:hover button  {
+    background-color: black; /* Фон кнопки стає чорним */
+    border-color: #FFE524; /* Рамка кнопки стає жовтою */
+    color: white; /* Текст кнопки залишається білим */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+    
+    .header-content-row {
+      display: flex;
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px 0; 
+    }
+    main{
+
+      margin-top: 130px;
+    }
+        .charms img {
+        width: 32px; 
+        height: 32px;
+    }
+    
+    .top-nav-links {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 10px; 
+        gap: 0;
+    }
+    
+    .bot-nav-links {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-around;
+        gap: 0; 
+        padding: 10px 0;
+    }
+   
+    .flex-menu {
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        justify-content: center; 
+        padding: 10px;
+    }
+
+    .pizzas {
+        width: 45%; 
+        margin: 0 1% 20px 1%; 
+        box-sizing: border-box; 
+    }
+
+    .pizzas img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info-top, .info-bot {
+    flex-direction: column;
+    align-items: flex-start;
+    
+    width: 100%;
+    padding: 10px; 
+    }
+    .info-top p, .info-bot p{
+    flex-direction: column;
+    align-items: center;
+    
+    }
+
+    .info-top img, .info-bot img {
+        max-width: 80%;
+        height: auto;
+        order: -1; 
+    }
+
+
+    .info-bot img {
+        align-self: flex-end; 
+    }
+
+    
+    .info-top p, .info-bot p {
+        text-align: left; 
+        margin: 10px 0; 
+        transform: none; 
+        padding: 0;
+    }
+    
+    .address-info h2 {
+    font-size: 1.2em; 
+    margin-bottom: 5px;
+    }
+    .address-info p {
+        font-size: 0.85em; 
+    }
+    
+ }  
+
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: left;
+  padding: 20px; 
+}
+    footer .logo-container,
+    footer h2, footer h3, footer h4,
+    footer img[src*="futer_buttons"] {
+        margin-left: 0;
+        margin-right: auto; 
+        width: auto;
+    }
+}          
