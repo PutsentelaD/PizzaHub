@@ -236,63 +236,32 @@ text-align: center;
   }
  
 section {
-    /* Це правильно, воно робить секцію точкою відліку */
-    position: relative; 
-    
-    /* !! КЛЮЧ: Задайте висоту для вашої "ковбаси" !! */
-    /* Використовуйте min-height для гнучкості або height для фіксованого розміру */
-    min-height: 200px; 
-    
+    position: relative;     
+    min-height: 200px;     
     overflow: hidden; 
 }
 
-
-/* 2. Відео: Абсолютний фон */
 video {
-    /* ЗМІНІТЬ: Використовуйте absolute, а не fixed! */
     position: absolute; 
-    
-    /* Розтягує відео на 100% ширини і висоти батьківської секції */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
-    /* Зберігає коректне відображення, щоб покрити простір */
     object-fit: cover;
-    
-    /* Відправляє відео на задній план */
     z-index: 1; 
 }
 
 #Addres {
-    /* Встановлюємо висоту, наприклад, на всю висоту вікна перегляду */
-    height: 100vh; /* Або будь-яка фіксована висота, яка вам потрібна */
-
-    /* Встановлюємо позиціонування, щоб дочірні абсолютні елементи (відео та оверлей) 
-       позиціонувалися відносно нього */
+    height: 100vh; 
     position: relative; 
-
-    /* Всі інші стилі для цієї секції... */
 }
 
 .address-info {
-    /* ВІДМІНА: Змініть position: absolute на position: relative */
-    /* Якщо ви залишите його absolute, вам не потрібно задавати йому висоту 100%, 
-       але простіше зробити його relative, щоб він просто "лежав" поверх. */
     position: relative; 
-    
-    /* Підніміть вміст над відео */
     z-index: 2; 
-    
-    /* Вам більше не потрібні top: 0, left: 0, width: 100%, height: 100% */
-    /* Використовуйте тільки ті, що стосуються форматування вмісту */
-    
     color: white; 
     background-color: rgba(0, 0, 0, 0.4); 
     padding: 20px;
-    
-    /* Стилі Flexbox: Використовуйте width: 100% та height: 100% */
     width: 100%;
     height: 100%;
     display: flex;
@@ -372,24 +341,19 @@ video {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); /* Темний, прозорий фон */
-
-    /* Приховуємо його (використовуємо visibility/opacity для анімації) */
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s; /* Додаємо плавний перехід */
+    transition: opacity 0.3s, visibility 0.3s; 
     z-index: 1000;
 }
 .modal-content {
-    /* Фіксовані розміри вікна */
     width: 450px;
     height: 600px; 
-    max-width: 90%; /* Забезпечуємо адаптивність на малих екранах */
+    max-width: 90%; 
     padding: 20px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-
-    /* Центрування за допомогою transform */
     position: absolute;
     top: 50%;
     left: 50%;
